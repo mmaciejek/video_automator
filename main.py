@@ -13,19 +13,19 @@ from data.reencoding import reencode_videos
 
 def main(clip_length_beats=2):
 
-    file_path = r"C:\Users\chaci\Desktop\PROJEKT\data\info_about_youtube_viedos\links_youtube_videos.txt"
+    file_path = r"\links_youtube_videos.txt"
 
-    video_folder = r"C:\Users\chaci\Desktop\PROJEKT\data\input_videos"
-    encoded_videos = r"C:\Users\chaci\Desktop\PROJEKT\data\input_reencoded_videos"
+    video_folder = r"/Users/maciejchacinski/Documents/GitHub/video_automator/data/input_videos"
+    encoded_videos = r"/Users/maciejchacinski/Documents/GitHub/video_automator/data/input_reencoded_videos"
 
-    clips_folder = r"C:\Users\chaci\Desktop\PROJEKT\data\input_clips"
-    output_folder = r"C:\Users\chaci\Desktop\PROJEKT\data\output_music_videos"
+    clips_folder = r"/Users/maciejchacinski/Documents/GitHub/video_automator/data/input_clips"
+    output_folder = r"/Users/maciejchacinski/Documents/GitHub/video_automator/data/output_music_videos"
 
     # download_videos_from_file(file_path, video_folder)
     reencode_videos(video_folder, encoded_videos)
 
     # Get BPM for each song in the SONGS folder
-    songs_folder = r"C:\Users\chaci\Desktop\PROJEKT\data\input_songs"
+    songs_folder = r"/Users/maciejchacinski/Documents/GitHub/video_automator/data/input_songs"
     for song_file in os.listdir(songs_folder):
         if song_file.endswith('.mp3'):
             # Get BPM
